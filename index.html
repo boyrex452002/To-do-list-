@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Pro - To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-tasks"></i> Productivity Pro</h1>
+        
+        <div class="input-container">
+            <input type="text" placeholder="What needs to be done?" id="taskInput" autofocus>
+            <button onclick="addTask()" id="addBtn">
+                <i class="fas fa-plus"></i> Add
+            </button>
+        </div>
+        
+        <div class="task-controls">
+            <button class="filter-btn active" onclick="filterTasks('all')">All</button>
+            <button class="filter-btn" onclick="filterTasks('active')">Active</button>
+            <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+        </div>
+        
+        <ul id="taskList">
+            <div class="empty-state">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No tasks yet. Add one above!</p>
+            </div>
+        </ul>
+        
+        <div class="stats" id="stats">
+            0 tasks remaining
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
